@@ -1,0 +1,177 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+  background-image: linear-gradient(to top, #6565e7, #af67e9);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 50% 0 20%;
+  }
+}
+
+.card {
+  background: white url("../images/bg-pattern-desktop.svg") no-repeat -530px -286px;
+  background-size: cover;
+  border-radius: 20px;
+  width: 76.6666666667rem;
+  min-height: 42.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-position: center top;
+    background-size: 80%;
+    width: 90%;
+    min-height: unset;
+    height: auto !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.card .for-desktop {
+  width: 37.3rem;
+  max-height: 42.5rem;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media screen and (max-width: 768px) {
+  .card .for-desktop {
+    display: none;
+  }
+}
+.card .for-desktop .online-women, .card .for-desktop .cube {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card .for-desktop .online-women {
+  overflow: hidden;
+}
+.card .for-desktop .online-women img {
+  width: 100%;
+  margin-left: -5rem;
+}
+.card .for-desktop .cube img {
+  margin-top: 8.6666666667rem;
+  margin-left: -7.75rem;
+}
+.card .for-mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .card .for-mobile {
+    display: block;
+    width: 80% !important;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    position: static;
+    margin-top: -36.5%;
+  }
+  .card .for-mobile img {
+    width: 100%;
+  }
+}
+.card .faqs {
+  padding-right: 8rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media screen and (max-width: 768px) {
+  .card .faqs {
+    padding: 8rem 0 4rem 0;
+    width: 85%;
+  }
+}
+.card .faqs .title {
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .card .faqs .title {
+    text-align: center;
+  }
+}
+.card .faqs .faq-item {
+  border-bottom: 1px solid #e7e7e9;
+}
+.card .faqs .faq-item .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.card .faqs .faq-item .head p {
+  padding-right: 1rem;
+  color: #4a4b5e;
+  font-size: 1.1rem;
+}
+.card .faqs .faq-item .head img {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.card .faqs .faq-item .body {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.card .faqs .faq-item.expanded .head p {
+  font-weight: bold;
+}
+.card .faqs .faq-item.expanded .head img {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.card .faqs .faq-item.expanded .body {
+  max-height: 20rem;
+  padding-bottom: 1rem;
+}
+.card .faqs .faq-item:not(.expanded):hover .head p {
+  color: #f47c57;
+}
